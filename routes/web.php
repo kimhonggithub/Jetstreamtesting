@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeContoller;
+use App\Http\Livewire\Admin\Users\ListUsers;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,9 +26,9 @@ Route::get('/user/dashboard', function(){
     return view('user.dashboard');
 })->name('user');
 
-Route::get('/admin/dashboard', function(){
-    return view('admin.dashboard');
-})->name('admin');
+Route::get('admin/dashboard',DashboardController::class)->name('admin');
+
+Route::get('admin/users',ListUsers::class)->name('admin.users');
 
 
 

@@ -39,6 +39,14 @@ class User extends Authenticatable
         'remember_token',
         'two_factor_recovery_codes',
         'two_factor_secret',
+        'created_at',
+        'updated_at',
+        'email_verified_at',
+        'profile_photo_url',
+        'two_factor_confirmed_at',
+        'current_team_id',
+        'usertype',
+        'profile_photo_path',
     ];
 
     /**
